@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+</head>
+<body>
+    <div class="nav-bar">
+    <a href="/"><h1 class="header">Tsabam!</h1></a>
+    <a href="/new" id="new">write a new one</a>
+    <div id="tat-nav-bar">
+    <div id="search">
+    <form action="/">
+    <input type="text" name="q" id="q" placeholder="search">
+    <button>search</button>
+    </form>
+</div>
+</div>
+</div>
+<% divrei.reverse() %> 
+    <% for(let x = 0; x<divrei.length; x++){ %>
+    <div><a href="/<%=divrei[x]._id  %>"><h4><%= divrei[x].writer %> - <%= divrei[x].header %> </h4></a>
+    </div>
+    <% } %>  
+  
+    <button onclick="loadMore()" id='load'>load more</button>
+<script>const button = document.querySelector("#load")</script>
+<style>
+    body {
+        background-color: #cccccc;
+       }
+       .header{
+           text-align: center;
+       }
+       #search{
+           display: inline-block;
+       }
+       #tat-nav-bar{
+           display: flexbox;
+           justify-content: space-around;
+       }
+</style>
+<script>
+    function sum(){
+        return document.querySelectorAll('.a').length
+    }
+</script>
+</body>
+</html>
